@@ -29,3 +29,9 @@ https://www.labellerr.com/blog/exploring-the-coco-dataset/#:~:text=In%20addition
 https://docs.ultralytics.com/datasets/detect/coco/
 
 The idea of being able to do it with limited amount of data stemmed from the following discussion: https://stackoverflow.com/questions/60227833/how-to-filter-coco-dataset-classes-annotations-for-custom-dataset, when we found it difficult to download such a large dataset.
+
+# Dataset Download
+Inorder to download the annotations file or any dataset file follow this link: https://gist.github.com/mkocabas/a6177fc00315403d31572e17700d7fd9 , this is the link from where we downloaded the annotations 
+
+
+In our case, we used the pycocotools library to interact with the COCO annotations, specifically the instances_train2017.json file. This file contains metadata for the images, including their URLs. We then used this metadata to download the image dataset.
