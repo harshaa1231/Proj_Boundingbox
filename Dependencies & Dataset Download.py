@@ -1,4 +1,3 @@
-
 #Install COCO library
 pip install pycocotools
 
@@ -7,10 +6,10 @@ import os
 import requests
 import zipfile
 
-def download_annotations(dst_dir="coco_annotations"):
+def download_annotations(fin_dir="coco_annotations"):
     url = "http://images.cocodataset.org/annotations/annotations_trainval2017.zip"
-    os.makedirs(dst_dir, exist_ok=True)
-    file_path = os.path.join(dst_dir, "annotations_trainval2017.zip")
+    os.makedirs(fin_dir, exist_ok=True)
+    file_path = os.path.join(fin_dir, "annotations_trainval2017.zip")
 
     print("Downloading COCO annotations...")
     response = requests.get(url, stream=True)
@@ -21,8 +20,8 @@ def download_annotations(dst_dir="coco_annotations"):
     print("Download complete. Extracting annotations...")
 
     with zipfile.ZipFile(file_path, "r") as zip_ref:
-        zip_ref.extractall(dst_dir)
-    print(f"Annotations extracted to {dst_dir}")
+        zip_ref.extractall(fin_dir)
+    print(f"Annotations extracted to {fin_dir}")
 
 # Download and extract annotations
 download_annotations()
@@ -31,7 +30,7 @@ download_annotations()
 #Downloading the Images from annotations path.
 from pycocotools.coco import COCO
 
-def download_coco_images(annotation_path, output_dir, num_images=100):
+def download_coco_images(annotation_path, output_dir, num_images=10000):
     coco = COCO(annotation_path)
     os.makedirs(output_dir, exist_ok=True)
     
