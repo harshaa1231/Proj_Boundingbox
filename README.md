@@ -11,10 +11,15 @@ The aim of the project is to Implement a CNN model using a deep learning library
 
 # Procedure
 Firstly, we were determined on using the https://cocodataset.org/#download
+
 As can be seen in the Dependencies & Dataset download file, we then started the process of importing the required libraries.
+
 As can be seen in the Visualization code file, we then visualized the dataset without using any models for training.
+
 Next, we intend to use a deep learning package to create a CNN model, and we look for objects' bounding boxes surrounding it.
+
 Lastly, by including our own image, we intend to test this model on photos other than the train file.
+
 we will attempt to run it on streamlit and provide a demo if we can.
 
 # Method Explanation
