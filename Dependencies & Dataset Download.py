@@ -28,7 +28,7 @@ def download_annotations(dst_dir="coco_annotations"):
 download_annotations()
 
 
-#Downloading the train Images from the 2017 dataset
+#Downloading the Images from annotations path.
 from pycocotools.coco import COCO
 
 def download_coco_images(annotation_path, output_dir, num_images=100):
@@ -48,5 +48,5 @@ def download_coco_images(annotation_path, output_dir, num_images=100):
                 f.write(chunk) #Writes each chunk of data into the file opened at img_path
     print(f"Downloaded {num_images} images to {output_dir}.")
 
-download_coco_images("/Users/harshavardhan/coco_annotations/annotations/instances_train2017.json", "data/coco_subset", num_images=10000)
+download_coco_images("/Users/harshavardhan/coco_annotations/annotations/instances_train2017.json", "data/coco_subset", num_images=10000) #(num_images= Can be your choice)
 
