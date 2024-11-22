@@ -34,7 +34,7 @@ def download_coco_images(annotation_path, output_dir, num_images=10000):
     coco = COCO(annotation_path)
     os.makedirs(output_dir, exist_ok=True)
     
-    image_ids = coco.getImgIds()[:num_images]  # Selects a subset
+    image_ids = coco.getImgIds()[:num_images]  #getImgIds- Is a API to retrive the image id's #[:num_images]- Selects the subset of only the num_images count given
     for img_id in image_ids:
         img_info = coco.loadImgs(img_id)[0]
         img_url = img_info['coco_url']
