@@ -66,19 +66,13 @@ def display_multiple_images(coco, images, annotations, num_images=20):
         print(f"Displaying image {i+1}/{num_images}: {os.path.basename(images[i])}")
         display_image_with_annotations(images[i], annotations[i], coco)
 
-# Example usage
+#Adding paths to visualise the image data
 image_dir = "data/coco_subset"  # Path to your image directory
 annotation_path = "../annotations/instances_train2017.json"  # Path to annotations (@ '..' insert your file path) 
 
 # Load annotations and images
 coco, images, annotations = load_coco_annotations(annotation_path, image_dir)
 
-
 # Display the first 20 images and their annotations
 display_multiple_images(coco, images, annotations, num_images=20) #(num_images= is your choice)
-
-
-
-
-
 
