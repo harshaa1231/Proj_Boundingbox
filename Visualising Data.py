@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import os
 import cv2
 import matplotlib.pyplot as plt
@@ -63,7 +57,7 @@ def display_image_with_annotations(img_path, annotations, coco):
         plt.gca().add_patch(plt.Rectangle((x, y), w, h, fill=False, color='red', linewidth=2))
         plt.text(x, y - 10, category_names[category], color='red', fontsize=12)
     
-    plt.axis('off')  # Hide axes
+    plt.axis('off')  # Hiding axes
     plt.show()
 
 # Display multiple images with annotations
@@ -74,20 +68,16 @@ def display_multiple_images(coco, images, annotations, num_images=20):
 
 # Example usage
 image_dir = "data/coco_subset"  # Path to your image directory
-annotation_path = "/Users/harshavardhan/coco_annotations/annotations/instances_train2017.json"  # Path to annotations
+annotation_path = "../annotations/instances_train2017.json"  # Path to annotations (@ '..' insert your file path) 
 
 # Load annotations and images
 coco, images, annotations = load_coco_annotations(annotation_path, image_dir)
 
 
-# In[2]:
-
-
 # Display the first 20 images and their annotations
-display_multiple_images(coco, images, annotations, num_images=20)
+display_multiple_images(coco, images, annotations, num_images=20) #(num_images= is your choice)
 
 
-# In[ ]:
 
 
 
