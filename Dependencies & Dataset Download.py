@@ -1,15 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[3]:
-
-
+#Install COCO library
 pip install pycocotools
 
-
-# In[5]:
-
-
+#Downloading annotations of the 2017 year.
 import os
 import requests
 import zipfile
@@ -35,12 +28,8 @@ def download_annotations(dst_dir="coco_annotations"):
 download_annotations()
 
 
-# In[8]:
-
-
+#Downloading the train Images from the 2017 dataset
 from pycocotools.coco import COCO
-import requests
-import os
 
 def download_coco_images(annotation_path, output_dir, num_images=100):
     coco = COCO(annotation_path)
