@@ -2,7 +2,7 @@
 This repository contains the code and dataset for a group project being developed as part of the final assessment for Neural Networks and Deep Learning.
 
 # Project Group Members
-Isha Paliwal
+Isha Paliwal \n
 Harsha Talapaka
 Needhi Kore
 
