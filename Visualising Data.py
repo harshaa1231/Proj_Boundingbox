@@ -54,8 +54,8 @@ def display_image_with_annotations(img_path, annotations, coco):
     
     for bbox, category in zip(annotations['boxes'], annotations['classes']):
         x, y, w, h = bbox
-        plt.gca().add_patch(plt.Rectangle((x, y), w, h, fill=False, color='red', linewidth=2))
-        plt.text(x, y - 10, category_names[category], color='red', fontsize=12)
+        plt.gca().add_patch(plt.Rectangle((x, y), w, h, fill=False, color='green', linewidth=2))
+        plt.text(x, y - 10, category_names[category], color='green', fontsize=12)
     
     plt.axis('off')  # Hiding axes
     plt.show()
