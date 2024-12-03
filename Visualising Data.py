@@ -1,7 +1,6 @@
 import os
 import cv2
 import matplotlib.pyplot as plt
-from pycocotools.coco import COCO
 
 # Function to load COCO annotations
 def load_coco_annotations(annotation_path, image_dir):
