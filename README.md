@@ -1,4 +1,4 @@
-# Proj_Boundingbox (In Progess.....)
+# Proj_Boundingbox (In Progress.....)
 This repository contains the code and dataset for a group project being developed as part of the final assessment for Neural Networks and Deep Learning.
 
 # Team Members
