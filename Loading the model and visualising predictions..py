@@ -1,19 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Loading the model to visualize predictions on random images.
-
-# In[1]:
-
-
 import cv2
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
-
-
-# In[2]:
 
 
 # Load the trained model
@@ -24,9 +13,6 @@ cnn_model = load_model('cnn_bounding_box_model.h5')
 input_size = (224, 224)
 
 
-# In[3]:
-
-
 def preprocess_image(image_path):
     img = cv2.imread(image_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # Convert BGR to RGB
@@ -34,9 +20,6 @@ def preprocess_image(image_path):
     img_normalized = img_resized.astype(np.float32) / 255.0  # Normalize the image
     img_input = np.expand_dims(img_normalized, axis=0)  # Add batch dimension
     return img, img_input
-
-
-# In[4]:
 
 
 def visualize_prediction(image_path):
@@ -60,28 +43,8 @@ def visualize_prediction(image_path):
     plt.show()
 
 
-# In[7]:
 
 
 # Example usage
-image_path = '/Users/harshavardhan/data/coco_subset/000000001369.jpg'  # Replace with your image path
+image_path = '/../../data/coco_subset/000000001369.jpg'  # Replace with your image path
 visualize_prediction(image_path)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
