@@ -1,4 +1,4 @@
-# Proj_Boundingbox (In Progress.....)
+# Proj_Boundingbox
 This repository contains the code and dataset for a group project being developed as part of the final assessment for Neural Networks and Deep Learning.
 
 # Team Members
@@ -10,17 +10,19 @@ Needhi Kore (G20475943)
 The aim of the project is to Implement a CNN model using a deep learning library that can determine the bounding box for set objects. 
 
 # Procedure
-Firstly, we were determined on using the https://cocodataset.org/#download
+After selecting the dataset: https://cocodataset.org/#download
 
-As can be seen in the Dependencies & Dataset download file, we then started the process of importing the required libraries.
+From the dependencies and dataset file, you can infer the steps one step at time on how we imported the dependencies and how to download the correct data to be able to complete the project.
 
-As can be seen in the Visualization code file, we then visualized the dataset without using any models for training.
+This is optional but if you wish to see your dataset before training then you can use the Visualization code file to visualise the dataset without using any models for training.
 
-Next, we intend to use a deep learning package to create a CNN model, and we look for objects' bounding boxes surrounding it.
+Then went into preprocesing the Data, you can learn more going through the document on how it was done. 
 
-Lastly, by including our own image, we intend to test this model on photos other than the train file.
+We then build our basic and custom cnn model from Scratch, without any libraries, and then complied the model and ran the fitted data in it.
 
-we will attempt to run it on streamlit and provide a demo if we can.
+After, fitting it and visualising the results, the model was saved into our local so that we could make predictions on any given image.
+
+As mentioned, I have been able to run the project on streamlit successfully, since the model file was large and wasnt been able to be uploaded on github, I would be demonstrating on how it can be used below.
 
 # Method Explanation
 As, you may think after going through the Dependencies & Dataset download file on why we did the following and why we used only 10,000 images to train but downloaded all the annotations?
@@ -38,5 +40,16 @@ The idea of being able to do it with limited amount of data stemmed from the fol
 # Dataset Download
 Inorder to download the annotations file or any dataset file follow this link: https://gist.github.com/mkocabas/a6177fc00315403d31572e17700d7fd9 , this is the link from where we downloaded the annotations 
 
-
 In our case, we used the pycocotools library to interact with the COCO annotations, specifically the instances_train2017.json file. This file contains metadata for the images, including their URLs. We then used this metadata to download the image dataset.
+
+# Predicting Results & Implementing model on streamlit.
+Once you have been able to run the model sucessfully and have been able to run it inorder to make predictions for the same, create a file on VScode ( I suggest VScode because there are other dependencies that you need to download for anaconda, or jupyter notebook.
+
+Once you have done creating a file, load the model and then as seen in the Prediction.py file load your model.
+After loading your model, write a function to preprocess any new data that you want to predict. We preprocess the data inorder to satisfy the models ability to take image sizes of 224, 224 pixels
+After resizing your images, write a function to visualise your prediction. For which in your function, load the image, use the cnn model to predict it and denormalise the image after predicting it and extract the co-ordinates.
+You can use any shape to draw a bounding box on the image based on your comfort, I used a rectangle. You can use this link to do the same: https://www.scaler.com/topics/cv2-rectangle/
+
+To run it on streamlit, After having written the prediction.py file with the needed as mentioned, write your own UI for the streamlit app: https://docs.vultr.com/how-to-deploy-a-deep-learning-model-with-streamlit
+
+Finally you can run it on your local IP and be able to use to add any images you want to see the bounding boxes.
